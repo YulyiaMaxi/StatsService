@@ -13,6 +13,7 @@ public class StatsServiceTest {
         long actual = service.sum(sales);
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testAverage() {
         StatsService service = new StatsService();
@@ -36,7 +37,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
-        int actual = service.monthMaxSale(sales);
+        int actual = service.monthMinSale(sales);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -58,5 +59,7 @@ public class StatsServiceTest {
         Assertions.assertEquals(expected, actual);
     }
 }
+
+
 
 

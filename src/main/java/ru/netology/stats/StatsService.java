@@ -17,22 +17,26 @@ public class StatsService {
     public int monthMaxSale(long[] sales) {
         int monthMax = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[monthMax]) ;
-            monthMax = i;
+            if (sales[i] >= sales[monthMax]) {
 
+                monthMax = i;
+
+            }
         }
         return monthMax + 1;
     }
 
+
     public int monthMinSale(long[] sales) {
         int monthMin = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[monthMin]) ;
-            monthMin = i;
-
+            if (sales[i] <= sales[monthMin]) {
+                monthMin = i;
+            }
         }
         return monthMin + 1;
     }
+
 
     public int monthsBellowAverage(long[] sales) {
         int counter = 0;
